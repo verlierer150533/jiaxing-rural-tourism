@@ -1,0 +1,36 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# ---- Node / Vite ----
+node_modules/
+dist-ssr/
+.tmp/
+.vite/
+npm-debug.log*
+
+# ---- 构建产物（如随作品提交运行文件，可保留 dist） ----
+# dist/
+
+# ---- 运行时 ----
+uploads/*
+!uploads/.gitkeep
+*.log
+_run.out
+_run.err
+.env
+
+# ---- 第三方二进制 ----
+# 保留 tools/redis 的 exe 以支持一键启动，但调试符号与运行数据不入库
+tools/redis/*.pdb
+tools/redis/dump.rdb
+*.zip
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

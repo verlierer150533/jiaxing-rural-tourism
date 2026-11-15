@@ -1,0 +1,37 @@
+{
+  "name": "海宁乡村农文旅",
+  "appid": "",
+  "description": "基于 WebGIS 与多端协同的海宁乡村农文旅服务平台（微信小程序端）",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "app-plus": {
+    "usingComponents": true,
+    "nvueStyleCompiler": "uni-app",
+    "compilerVersion": 3
+  },
+  "quickapp": {},
+  "mp-weixin": {
+    "appid": "touristappid",
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "minified": true,
+      "postcss": true
+    },
+    "usingComponents": true,
+    "permission": {
+      "scope.userLocation": {
+        "desc": "用于展示海宁市农文旅资源点位与导航"
+      }
+    },
+    "requiredPrivateInfos": ["getLocation"]
+  },
+  "h5": {
+    "title": "海宁乡村农文旅",
+    "router": {
+      "mode": "hash"
+    }
+  },
+  "vueVersion": "3"
+}

@@ -1,0 +1,1 @@
+import{g as t}from"./_plugin-vue_export-helper.CAKTg6pr.js";function n(n){return t("/attractions",n)}function r(n){return t(`/attractions/${n}`)}function a(){return t("/attractions/map")}function o(){return t("/attractions/meta")}export{o as a,a as b,r as c,n as f};

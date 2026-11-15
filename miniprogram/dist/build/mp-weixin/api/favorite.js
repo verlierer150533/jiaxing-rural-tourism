@@ -1,0 +1,1 @@
+"use strict";const e=require("./request.js");exports.checkFavorite=function(t,r){return e.get("/favorite/check",{session_id:t,target_id:r})},exports.fetchFavorites=function(t){return e.get("/favorite",{session_id:t})},exports.toggleFavorite=function(t,r){return e.post("/favorite",{session_id:t,target_id:r})};

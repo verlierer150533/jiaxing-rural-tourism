@@ -1,0 +1,1 @@
+"use strict";const e=require("../common/vendor.js"),t="jrt_session_id";function n(){let n=e.index.getStorageSync(t);return n||(n=`mp-${Date.now().toString(36)}-${Math.random().toString(36).slice(2,10)}`,e.index.setStorageSync(t,n)),n}exports.getSessionId=n,exports.resetSessionId=function(){return e.index.removeStorageSync(t),n()};

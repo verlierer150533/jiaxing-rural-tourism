@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const o=require("./common/vendor.js");Math;const e={onLaunch(){console.log("[农文旅小程序] 启动")},onShow(){},onHide(){}};function t(){return{app:o.createSSRApp(e)}}t().app.mount("#app"),exports.createApp=t;

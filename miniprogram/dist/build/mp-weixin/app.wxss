@@ -1,0 +1,2 @@
+page{background-color:#f4f7f5;color:#24312a;font-family:-apple-system,PingFang SC,Microsoft YaHei,sans-serif}.container{padding:24rpx}.card{background:#fff;border-radius:20rpx;padding:24rpx;box-shadow:0 6rpx 20rpx rgba(33,70,58,.06)}.muted{color:#7b8b82;font-size:24rpx}
+page{--status-bar-height:25px;--top-window-height:0px;--window-top:0px;--window-bottom:0px;--window-left:0px;--window-right:0px;--window-magin:0px}[data-c-h="true"]{display: none !important;}

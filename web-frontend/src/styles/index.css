@@ -1,0 +1,195 @@
+:root {
+  /* ---- 农文旅品牌色 ---- */
+  --jrt-green: #2f7d4f;        /* 竹青绿：主色 */
+  --jrt-green-light: #3f9c65;
+  --jrt-blue: #2b6cb0;         /* 潮水蓝：辅色 */
+  --jrt-gold: #c9a227;         /* 麦金：点缀 */
+  --jrt-bg: #f4f7f5;
+  --jrt-surface: #ffffff;
+  --jrt-text: #24312a;
+  --jrt-muted: #6b7f75;
+  --jrt-border: #e6ece8;
+  --jrt-shadow: 0 6px 20px rgba(33, 70, 58, 0.06);
+
+  /* ---- 覆盖 Element Plus 主题变量（本文件在 element-plus css 之后引入）---- */
+  --el-color-primary: #2f7d4f;
+  --el-color-primary-light-3: #4f9a6c;
+  --el-color-primary-light-5: #77b392;
+  --el-color-primary-light-7: #a9cfba;
+  --el-color-primary-light-8: #c3ddcf;
+  --el-color-primary-light-9: #e8f2ec;
+  --el-color-primary-dark-2: #26643f;
+  --el-border-radius-base: 8px;
+  --el-border-radius-small: 6px;
+  --el-text-color-primary: #24312a;
+  --el-text-color-regular: #4a5a50;
+  --el-border-color-light: #e6ece8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  /* 极淡的竹青光晕 + 底色，比纯灰背景更有温度 */
+  background:
+    radial-gradient(1200px 420px at 18% -12%, #e6f1ea 0%, rgba(230, 241, 234, 0) 62%),
+    radial-gradient(900px 360px at 100% 0%, #eaf1f7 0%, rgba(234, 241, 247, 0) 55%),
+    var(--jrt-bg);
+  color: var(--jrt-text);
+}
+
+/* ================= 标题 ================= */
+.page-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  letter-spacing: 0.5px;
+}
+
+.page-subtitle {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--jrt-muted);
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 副标题前的短横线，替代生硬的圆点 */
+.page-subtitle::before {
+  content: '';
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--jrt-gold), rgba(201, 162, 39, 0.15));
+}
+
+.card-grid {
+  display: grid;
+  gap: 16px;
+}
+
+/* ================= Element Plus 观感改造 ================= */
+.el-card {
+  border-radius: 14px;
+  border: 1px solid var(--jrt-border);
+  box-shadow: var(--jrt-shadow);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  overflow: hidden;
+}
+
+.el-card:hover {
+  box-shadow: 0 10px 28px rgba(33, 70, 58, 0.1);
+  transform: translateY(-1px);
+}
+
+.el-card__header {
+  border-bottom: 1px solid var(--jrt-border);
+  padding: 14px 18px;
+  background: linear-gradient(180deg, #fbfdfc, #f6faf7);
+}
+
+.el-button {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.el-button--primary {
+  background-image: linear-gradient(135deg, var(--jrt-green), var(--jrt-green-light));
+  border: none;
+}
+
+.el-button--primary:hover {
+  background-image: linear-gradient(135deg, #26643f, #358a58);
+}
+
+.el-tag {
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.el-input__wrapper,
+.el-textarea__inner {
+  border-radius: 8px;
+}
+
+.el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1px var(--jrt-green) inset;
+}
+
+/* 表格：表头换成淡竹青，斑马纹更柔和 */
+.el-table {
+  --el-table-header-bg-color: #f3f8f4;
+  --el-table-row-hover-bg-color: #f2f8f4;
+  --el-table-border-color: #edf2ee;
+  border-radius: 10px;
+}
+
+.el-table th.el-table__cell {
+  background: #f3f8f4;
+  color: var(--jrt-text);
+  font-weight: 600;
+}
+
+.el-table .el-table__row--striped td.el-table__cell {
+  background: #fafcfb;
+}
+
+.el-pagination.is-background .el-pager li.is-active {
+  background-color: var(--jrt-green);
+  border-color: var(--jrt-green);
+}
+
+/* ================= KPI 卡 ================= */
+.kpi-card {
+  position: relative;
+  border-radius: 14px;
+  color: #fff;
+  padding: 18px 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(33, 70, 58, 0.14);
+}
+
+/* 右上角柔光斑，提升质感但不抢戏 */
+.kpi-card::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -30px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+}
+
+.kpi-card .label {
+  font-size: 13px;
+  opacity: 0.88;
+  letter-spacing: 0.5px;
+}
+
+.kpi-card .value {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 6px;
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+}
+
+.kpi-card .hint {
+  font-size: 12px;
+  opacity: 0.82;
+  margin-top: 4px;
+}

@@ -1,0 +1,1 @@
+"use strict";const t=require("./request.js");exports.fetchAttraction=function(e){return t.get(`/attractions/${e}`)},exports.fetchAttractions=function(e){return t.get("/attractions",e)},exports.fetchMapMarkers=function(){return t.get("/attractions/map")},exports.fetchMeta=function(){return t.get("/attractions/meta")};
